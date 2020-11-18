@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 exports.config = {
 	//
 	// ====================
@@ -53,7 +54,7 @@ exports.config = {
 		// 5 instances get started at a time.
 		maxInstances: 5,
 		//
-		browserName: 'Chrome',
+		browserName: 'chrome',
 		// If outputDir is provided WebdriverIO can capture driver session logs
 		// it is possible to configure which logTypes to include/exclude.
 		// excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -141,7 +142,7 @@ exports.config = {
 		source: true,       // <boolean> hide source uris
 		profile: [],        // <string[]> (name) specify the profile to use
 		strict: false,      // <boolean> fail if there are any undefined or pending steps
-		tagExpression: '',  // <string> (expression) only execute the features or scenarios with tags matching the expression
+		tagExpression: '@dev or @regression or ${process.env.ENVIRONMENT}',  // <string> (expression) only execute the features or scenarios with tags matching the expression
 		timeout: 60000,     // <number> timeout for step definitions
 		ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
 	},
