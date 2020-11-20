@@ -14,6 +14,9 @@ class Login {
 	get signOutButton() {
 		return $("#header > div.nav > div > div > nav > div:nth-child(2) > a");
 	}
+	get errorMessage() {
+		return $(".alert.alert-danger > ol");
+	}
 	/**
 	 * 
 	 * @param {string} email - Email
